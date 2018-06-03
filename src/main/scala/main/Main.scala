@@ -1,13 +1,13 @@
 package main
 
-import command.CommandExecutor
-import poll.content.AnswerInstance
+import command._
 
 object Main extends App {
-
-  val freeQuestion = AnswerInstance("some answer").createFreeAnswer()
-  val choiceQuestion = AnswerInstance("3").createChoiceAnswer()
-  val multiQuestion = AnswerInstance("1 2 dsa").createMultiAnswer()
-
   val sender: String = "Antony"
+  println(CommandExecutor.execute(sender, CreatePoll("Test poll", Option(true), Option(true), None, None)))
+  println(CommandExecutor.execute(sender, OpenPoll(1)))
+  println(CommandExecutor.execute(sender, CreateQuestion("How are you?", Option("free"), List.empty)))
+  println(CommandExecutor.execute(sender, CreateQuestion("What is your name?", Option("free"), List.empty)))
+  println(CommandExecutor.execute(sender, CreateQuestion("What is your gender?", Option("choice"), List[String]("male", "female"))))
+  println(CommandExecutor.execute(sender, GetContent()))
 }
