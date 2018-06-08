@@ -1,0 +1,13 @@
+antony> /create_poll (Test poll)
+antony> /begin 1
+antony> /add_question (what's your name?)
+antony> /add_question (how r u?) (choice) (good) (bad)
+antony> /add_question (your favorite food?) (multi) (pizza) (burger) (ice cream)
+antony> /start_poll 1
+antony> /answer (1) (antony)
+antony> /answer (2) (1)
+antony> /answer (3) (2)
+antony> /list
+antony> /view
+antony> /stop_poll 1
+antony> /results 1

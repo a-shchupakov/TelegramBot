@@ -22,4 +22,3 @@ case class SetAnswer(id: Int, answer: AnswerInstance) extends Command
 case class GetPolls() extends Command
 case class GetContent() extends Command
 case class GetResults(id: Int) extends Command
-
